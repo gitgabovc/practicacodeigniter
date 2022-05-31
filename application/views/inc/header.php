@@ -32,6 +32,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script src="<?php echo base_url();?>assets/validador.js"></script>
 <script src="<?php echo base_url();?>scripts/control_usuario.js"></script>
+<script src="<?php echo base_url();?>scripts/control_login.js"></script>
+
 </head>
 
 <body>
