@@ -1,0 +1,1 @@
+var url_p="http://localhost/practica/codeigniter/";
