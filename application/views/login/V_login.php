@@ -5,8 +5,11 @@
 		<div class="col-md-12">
       <center>
 			<h1>Login de usuarios</h1>
-      <br>
 
+      <br>		
+	  <div class="mb-2">
+			    <div id="panel_respuesta_ingreso"></div>
+	  </div>
 				<div class="mb-3">
 					<input type="email" class="form-control" id="email" aria-describedby="emailHelp" style="width:400px" placeholder="*Email">
 					
@@ -19,7 +22,6 @@
         </center>
 		<center>
 				<button type="button" class="btn btn-primary" onclick="login();">Ingresar</button>
-				<div id="panel_respuesta_ingreso"></div>
         </center>
 		</div>
 	</div>

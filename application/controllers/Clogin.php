@@ -23,14 +23,13 @@ class Clogin extends CI_Controller {
 			$q=$this->Mlogin->login($email,$password);
 			if($q->num_rows()>0)
 			{
-				$e = '<script type="text/javascript">
+				echo '<script type="text/javascript">
 				window.location.href ="'. base_url().'Ccliente";
 			 	</script>';
-				 echo $e;
 			}
 			else
 			{
-				redirect('Clogin');
+				echo "<div style='background-color:orange; width:400px;'>El usuario no fue encontrado, por favor vuelva a ingresar sus datos</div>";
 			}
 		}
 
