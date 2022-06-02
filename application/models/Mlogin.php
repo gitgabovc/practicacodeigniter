@@ -13,12 +13,6 @@ class Mlogin extends CI_Model {
 		$this->db->where('password',$password);
 		return $this->db->get('usuario');
 
-		if($q->num_rows()>0){
-			return true;
-		}else{
-			return false;
-		}
-
 	}
 
 

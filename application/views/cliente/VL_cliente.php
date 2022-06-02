@@ -2,51 +2,16 @@
   <div class="row">
     <!-- Formulario de registro -->
 
-    <div class="col-md-4 col-xs-12" >
-      <h2 class="text-center mb-12">Insertar Cliente</h2>
-      <div class="row">
-        <div class="col-lg-12">
-          <label for="exampleInputEmail1" class="form-label">Fotografia</label>
-          <input type="text" class="form-control" required  name="fotografia" id="fotografia" aria-describedby="emailHelp">
-        </div>
-        <div class="col-lg-12">
-          <label for="exampleInputEmail1" class="form-label">Cliente</label>
-          <input type="text" class="form-control" required name="cliente" id="cliente" aria-describedby="emailHelp">
-        </div>
-        <div class="col-lg-12">
-          <label for="exampleInputEmail1" class="form-label">Ci_cli</label>
-          <input type="text" class="form-control"  name="ci_cli" id="ci_cli" aria-describedby="emailHelp">
-        </div>
-        <div class="col-lg-12">
-          <label for="exampleInputEmail1" class="form-label">Celular_cli</label>
-          <input type="text" class="form-control" required name="celular_cli" id="celular_cli" aria-describedby="emailHelp">
-        </div>
-        <div class="col-lg-12">
-          <label for="exampleInputEmail1" class="form-label">Direccion_cli</label>
-          <input type="text" class="form-control" required name="direccion_cli" id="direccion_cli" aria-describedby="emailHelp">
-        </div>
-        <div class="col-lg-12">
-          <label for="exampleInputEmail1" class="form-label">Observacion_cli</label>
-          <input type="text" class="form-control" required name="observacion_cli" id="observacion_cli" aria-describedby="emailHelp">
-        </div>
-        
-        
-        
-        <div class="col-lg-12">
-          <div id="panel_respuesta"></div>
-            <center style="margin-top:3%;">
-            <button type="button" class="btn btn-primary " onclick="btn_guardar_datos();"> Aceptar</button>
-            </center>
-          </div> 
-        </div>
-    </div>
+    <?php echo $this->session->userdata['s_id_usuario']; ?>
 
 <!-- Listado de cliente -->
     <div class="col-md-8 col-xs-12"">
         <h2 align="center">lista de datos</h2>
-        <input type="text" class="form-control"  name="" id="dato_buscado" aria-describedby="emailHelp" onkeyup="btn_buscar();" style="width:70%;display:inline;margin-top:30px; margin-bottom:15px;">
+        <input type="text" class="form-control"  name="" id="dato_buscado" aria-describedby="emailHelp" onkeyup="btn_buscar();" style="width:60%;display:inline;margin-top:30px; margin-bottom:15px;">
         <button type="button" class="btn btn-primary " onclick="btn_buscar();"> Buscar</button>
         <button type="button" class="btn btn-primary " onclick="btn_listar_datos();"> Listar</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal_registrar" onclick="btn_modal_para_ingresar()" style="display:inline;">Registrar</button>
+
         <div id="panel_listado">
             <table class="table" >
               <thead>
@@ -160,6 +125,34 @@
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-info" data-bs-dismiss="modal" onclick="btn_guardar_edicion()">Guardar</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- The Modal guardar -->
+<div class="modal fade" id="myModal_registrar">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header" style="background-color: #084B8A; color:white">
+        <h4 class="modal-title">Modal Registrar</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+       
+        <div id="panel_registrar"></div>
+        <div id="panel_respuesta_registrar"></div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-bs-dismiss="modal" onclick="btn_guardar_datos();">Guardar</button>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
       </div>
 

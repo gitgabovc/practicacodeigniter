@@ -151,5 +151,43 @@ if($opcion =="buscador"){
 
   <?php  
 }
+if($opcion =="formulario"){
+  ?>
+      <div class="container">
+    <div class="row">
+    
+    <div class="col-md-4 col-xs-12">
+      <div class="row">
+        <div class="col-lg-12">
+          <label for="exampleInputEmail1" class="form-label">Fotografia</label>
+          <input type="text" class="form-control" required  name="fotografia" id="fotografia" aria-describedby="emailHelp" >
+        </div>
+        <div class="col-lg-12">
+          <label for="exampleInputEmail1" class="form-label">Cliente</label>
+          <input type="text" class="form-control" required name="cliente" id="cliente" aria-describedby="emailHelp" >
+        </div>
+        <div class="col-lg-12">
+          <label for="exampleInputEmail1" class="form-label">Ci_cli</label>
+          <input type="text" class="form-control"  name="ci_cli" id="ci_cli" aria-describedby="emailHelp" >
+        </div>
+        <div class="col-lg-12">
+          <label for="exampleInputEmail1" class="form-label">Celular_cli</label>
+          <input type="text" class="form-control" required name="celular_cli" id="celular_cli" aria-describedby="emailHelp" >
+        </div>
+        <div class="col-lg-12">
+          <label for="exampleInputEmail1" class="form-label">Direccion_cli</label>
+          <input type="text" class="form-control" required name="direccion_cli" id="direccion_cli" aria-describedby="emailHelp" >
+        </div>
+        <div class="col-lg-12">
+          <label for="exampleInputEmail1" class="form-label">Observacion_cli</label>
+          <input type="text" class="form-control" required name="observacion_cli" id="observacion_cli" aria-describedby="emailHelp">
+        </div>
+  
+    </div> 
+  
+    </div> 
+  </div> 
 
-?>
+  <?php  
+}
+  ?>

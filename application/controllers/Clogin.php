@@ -23,6 +23,15 @@ class Clogin extends CI_Controller {
 			$q=$this->Mlogin->login($email,$password);
 			if($q->num_rows()>0)
 			{
+				$r=$q->row();
+
+				$s_usuario = array(
+					's_id_usuario'=>$r->id_usuario,
+					's_email'=>$r->email,
+				);
+
+				$this->session->set_userdata($s_usuario);
+
 				echo '<script type="text/javascript">
 				window.location.href ="'. base_url().'Ccliente";
 			 	</script>';

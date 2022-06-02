@@ -180,3 +180,29 @@ function btn_buscar()
                     }
                 });
 }
+
+
+function btn_modal_para_ingresar(){
+    
+
+    var ob= "";
+        $.ajax({
+                    //el protocolo
+                    type: "POST",
+                    //a donde quiero mandar el objeto
+                    url: url_p+"Ccliente/subir_modal",    
+                    data: ob,
+    
+                    //que quieres mostrar como recargable al iniciar
+                    beforeSend: function(objeto){
+                        
+                    },
+    
+                    //al finalizar
+                    success: function(data)
+                    {
+                        $("#panel_registrar").html(data);
+                       
+                    }
+                });
+}

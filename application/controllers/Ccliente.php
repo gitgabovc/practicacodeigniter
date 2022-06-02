@@ -132,6 +132,16 @@ class Ccliente extends CI_Controller {
 		
 		
 	}
+
+	//cargar el formulario al modal
+
+	public function subir_modal()
+	{
+		$data=array(
+			"opcion"=>"formulario",
+		);
+		$this->load->view('cliente/VO_cliente',$data);	
+	}
 	
 	
 }
