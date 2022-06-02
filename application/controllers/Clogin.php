@@ -17,7 +17,7 @@ class Clogin extends CI_Controller {
 
 	public function inde(){
 		
-		if(isset($_POST['password'])){
+		if(isset($_POST['password'])&&isset($_POST['email'])){
 			$password=$_POST['password'];
 			$email=$_POST['email'];
 			$q=$this->Mlogin->login($email,$password);

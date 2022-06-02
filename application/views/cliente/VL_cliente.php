@@ -44,7 +44,7 @@
 <!-- Listado de cliente -->
     <div class="col-md-8 col-xs-12"">
         <h2 align="center">lista de datos</h2>
-        <input type="text" class="form-control"  name="" id="dato_buscado" aria-describedby="emailHelp" style="width:70%;display:inline;margin-top:30px; margin-bottom:15px;">
+        <input type="text" class="form-control"  name="" id="dato_buscado" aria-describedby="emailHelp" onkeyup="btn_buscar();" style="width:70%;display:inline;margin-top:30px; margin-bottom:15px;">
         <button type="button" class="btn btn-primary " onclick="btn_buscar();"> Buscar</button>
         <button type="button" class="btn btn-primary " onclick="btn_listar_datos();"> Listar</button>
         <div id="panel_listado">

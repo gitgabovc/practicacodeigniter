@@ -66,7 +66,12 @@ class Mcliente extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('cliente');
-		$this->db->where('cliente',$cliente);
+		$this->db->like('cliente',$cliente);
+		$this->db->or_like('fotografia',$cliente);
+		$this->db->or_like('ci_cli',$cliente);
+		$this->db->or_like('celular_cli',$cliente);
+		$this->db->or_like('direccion_cli',$cliente);
+		$this->db->or_like('observacion_cli',$cliente);
 		return $this->db->get();
 	}
 	
