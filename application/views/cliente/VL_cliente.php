@@ -1,11 +1,43 @@
+<?php $id_usuario_session = $this->session->userdata['s_id_usuario']; ?>
+<input type="hidden"   id="id_usuario_session" value="<?php echo $id_usuario_session; ?>">
+
+
+
+<!-- navbar -->
+<div class="container">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-md-12 col-xs-12">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sistema Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="<?php echo base_url()?>/Ccliente/cerrar_sesion">Inicio</a>
+            </li>           
+          </ul>
+           <button type="button" class="btn btn-dark " onclick="btn_salir();"> Salir</button>         
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+ <!-- end navbar -->
+
 <div class="container" style="margin-left:50px;">
   <div class="row">
     <!-- Formulario de registro -->
 
-    <?php echo $this->session->userdata['s_id_usuario']; ?>
+    
+
+    
+    
+    
 
 <!-- Listado de cliente -->
-    <div class="col-md-8 col-xs-12"">
+    <div class="col-md-12 col-xs-12">
         <h2 align="center">lista de datos</h2>
         <input type="text" class="form-control"  name="" id="dato_buscado" aria-describedby="emailHelp" onkeyup="btn_buscar();" style="width:60%;display:inline;margin-top:30px; margin-bottom:15px;">
         <button type="button" class="btn btn-primary " onclick="btn_buscar();"> Buscar</button>
@@ -73,6 +105,10 @@
     </div>
   </div>
 </div>
+
+
+
+
 
 
 

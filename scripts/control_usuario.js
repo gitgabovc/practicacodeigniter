@@ -206,3 +206,28 @@ function btn_modal_para_ingresar(){
                     }
                 });
 }
+
+function btn_salir()
+{
+
+    var obj= "";
+        $.ajax({
+                    //el protocolo
+                    type: "POST",
+                    //a donde quiero mandar el objeto
+                    url: url_p+"Ccliente/cerrar_session",    
+                    data: obj,
+    
+                    //que quieres mostrar como recargable al iniciar
+                    beforeSend: function(objeto){
+                        
+                    },
+    
+                    //al finalizar
+                    success: function(data)
+                    {
+                        $("#panel_listado").html(data);
+                       
+                    }
+                });
+}

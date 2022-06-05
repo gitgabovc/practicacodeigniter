@@ -9,6 +9,14 @@ class Clogin extends CI_Controller {
 	}
 
 	public function index(){
+
+		if(isset($this->session->userdata['s_id_usuario']))
+		{
+			echo '<script type="text/javascript">
+				window.location.href ="'. base_url().'Ccliente";
+			 	</script>';
+		}
+
 		
 		$this->load->view("inc/header");
 		$this->load->view("login/V_login");

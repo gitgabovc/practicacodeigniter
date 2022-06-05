@@ -142,6 +142,14 @@ class Ccliente extends CI_Controller {
 		);
 		$this->load->view('cliente/VO_cliente',$data);	
 	}
+
+	public function cerrar_session()
+	{
+		$this->session->sess_destroy();
+		echo '<script type="text/javascript">
+		window.location.href ="'. base_url().'Clogin";
+		 </script>';
+	}
 	
 	
 }
