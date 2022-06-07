@@ -74,5 +74,17 @@ class Mcliente extends CI_Model {
 		$this->db->or_like('observacion_cli',$cliente);
 		return $this->db->get();
 	}
+
+	//paginacion metodo para contar
+
+	public function count()
+	{
+
+
+		$this->db->select('*');// select *
+		$this->db->from('cliente');// tabla
+		$query = $this->db->get();// rdevolucion del resultado de la consulta
+		return $query->num->rows();
+	}
 	
 }

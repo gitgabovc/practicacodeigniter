@@ -150,6 +150,8 @@ class Ccliente extends CI_Controller {
 		window.location.href ="'. base_url().'Clogin";
 		 </script>';
 	}
+
+	//paginacion
 	
 	
 }

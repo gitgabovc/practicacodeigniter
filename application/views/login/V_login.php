@@ -1,6 +1,7 @@
 
 <?php if (isset($this->session->userdata['s_id_usuario']))
 {
+  
 ?>
 <input type="text"   id="id_usuario_session" value="<?php echo $this->session->userdata['s_id_usuario']; ?>">
 <?php

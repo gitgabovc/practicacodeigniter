@@ -1,5 +1,16 @@
-<?php $id_usuario_session = $this->session->userdata['s_id_usuario']; ?>
+<?php 
+if(!isset($this->session->userdata['s_id_usuario'])){  
+
+  echo '<script type="text/javascript">
+				window.location.href ="'. base_url().'Clogin";
+			 	</script>';
+?>  
+<?php 
+}
+$id_usuario_session = $this->session->userdata['s_id_usuario'];
+?>
 <input type="hidden"   id="id_usuario_session" value="<?php echo $id_usuario_session; ?>">
+
 
 
 
@@ -105,11 +116,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
 
 
 <!-- The Modal -->
